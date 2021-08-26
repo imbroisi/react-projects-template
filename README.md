@@ -68,3 +68,4 @@ npm start
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/) (**VERIFICAR QUAL LICENÇA SERÁ USADA**)
+
