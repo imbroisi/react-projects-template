@@ -57,7 +57,7 @@ Cada diretório de componentes terá o nome do componente, e dentro dele teremos
 ```
 
 ### Como rodar este template
-Tanto este template quando os projetos dele derivados devem ter todas as dependências (exceto o Node) dentro do arquivo `package.json`, para serem instaladas localmente. **Nunca use uma dependência instalada globalmente**.
+Tanto este template quando os projetos dele derivados devem ter todas as dependências (exceto o Node) dentro do arquivo `package.json`, para serem instaladas localmente. **Nunca use uma dependência instalada fora do projeto (globalmente)**.
 Desta forma, tanto este template quando projetos dele derivados, devem ser instalados e executados com apenas estes comandos:
 ```javascript
 git clone git@gitlab.com:imbroisi/react-projects-template.git
