@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "engineStrict": true,
   "engines": {
-    "node": ">=12.18 <13"
+    "node": ">=16.11.1"
   },
   "private": true,
   "dependencies": {
