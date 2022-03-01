@@ -7,20 +7,32 @@ import React, {
   useEffect,
   useReducer,
 } from 'react';
+import { GRID_SIZE } from './constants';
+import {
+  WIDTH,
+  HEIGHT,
+} from './styles';
 
 const CanvasContext = createContext();
 
-export const WIDTH = 1600;
-export const HEIGHT = 900;
+// export const GRID_SIZE = 40;
+
+// export const WIDTH = 1600;
+// export const HEIGHT = 900;
+
+const ZOOM_FACTOR_1 = GRID_SIZE / 5000;
 
 let ctx;
 let canvas;
 let graphCenter = { x: 0, y: 0 };
+let mapCenter = { x: 0, y: 0 };
+let zoom = 1;
 
 export const setCtx = (data) => {
   ctx = data.ctx; 
   canvas = data.canvas; 
 };
+
 
 // export const setGraphCenter = (v) => {
 //   console.log('(2) --->>> graphCenter', graphCenter);
@@ -31,15 +43,36 @@ export const getCtx = () => ({
   ctx,
   canvas,
   graphCenter,
+  zoom,
+  zoomFactor: zoom * ZOOM_FACTOR_1,
+  mapCenter,
 });
+
+export const setMapCenter = (coord) => {
+  mapCenter = { ...coord };
+}
 
 const CanvasProvider = ({ children }) => {
   const [, forceUpdate] = useReducer(x => x + 1, 0);
+  const [lastCenterY, setLastCenterY] = useState(null);
 
   const setGraphCenter = (v) => {
     graphCenter = { ...v };
-    console.log('(1) --->>> graphCenter', graphCenter);
     forceUpdate();
+  };
+
+  const setZoom = (dir) => {
+    if (dir === 'up') {
+      zoom = zoom * 2;
+      graphCenter.y = mapCenter.y * 2
+      graphCenter.x = mapCenter.x * 2
+      forceUpdate();
+    } else if (zoom > 0.5) {
+      zoom = zoom / 2;
+      graphCenter.y = mapCenter.y / 2
+      graphCenter.x = mapCenter.x / 2
+      forceUpdate();
+    }
   };
 
   const getGraphCenter = () => ({ ...graphCenter });
@@ -49,6 +82,7 @@ const CanvasProvider = ({ children }) => {
     setGraphCenter,
     getCtx,
     setCtx,
+    setZoom,
   };
 
   console.log('(1) --->>>> RENDERING')
@@ -61,7 +95,7 @@ const CanvasProvider = ({ children }) => {
 };
 
 // eslint-disable-next-line react/prop-types
-export const Canvas = ({ onReady }) => {
+export const Canvas = ({ width, height, onReady }) => {
   const ref = useRef();
   const { setCtx } = useCanvas();
   // const ctx = useRef();
@@ -104,8 +138,8 @@ export const Canvas = ({ onReady }) => {
   return (
     <canvas
       ref={ref}
-      width={WIDTH}
-      height={HEIGHT}
+      width={width}
+      height={height}
     />
   );
 };

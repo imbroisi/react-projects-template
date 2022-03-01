@@ -1,11 +1,11 @@
 import styled from 'styled-components';
+import { GRID_SIZE } from './constants';
 
-export const WIDTH = 1600;
-export const HEIGHT = 900;
-
-export const GRID_SIZE = 50;
 export const GRID_COLOR = '#606060';
 export const GRID_COLOR_HILI = '#b0b0b0';
+
+export const WIDTH = 1600;
+export const HEIGHT = GRID_SIZE * 22;
 
 export const Container = styled.div`
   width: 100%;

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { getCtx } from './context-canvas';
 import { translatCood } from './drawGrid';
 
