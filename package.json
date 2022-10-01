@@ -1,7 +1,10 @@
 {
-  "name": "editor-star-system",
+  "name": "react-project-template",
   "version": "0.1.0",
   "engineStrict": true,
+  "engines": {
+    "node": ">=18.10.0 <19.0.0"
+  },
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
