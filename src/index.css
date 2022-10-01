@@ -9,111 +9,28 @@
  */
 
  @font-face {
-  font-family: 'Rubik';
+  font-family: 'MarkOT';
+  font-style: bold;
+  src: local(''),
+       url('./fonts/MarkOT-Bold.woff2') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MarkOT';
   font-style: normal;
-  font-weight: 300;
   src: local(''),
-       url('./fonts/rubik-v14-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('./fonts/rubik-v14-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Rubik';
-  font-style: italic;
-  font-weight: 300;
-  src: local(''),
-       url('./fonts/rubik-v14-latin-300italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('./fonts/rubik-v14-latin-300italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  src: local(''),
-       url('./fonts/rubik-v14-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('./fonts/rubik-v14-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Rubik';
-  font-style: italic;
-  font-weight: 400;
-  src: local(''),
-       url('./fonts/rubik-v14-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('./fonts/rubik-v14-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 500;
-  src: local(''),
-       url('./fonts/rubik-v14-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('./fonts/rubik-v14-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Rubik';
-  font-style: italic;
-  font-weight: 500;
-  src: local(''),
-       url('./fonts/rubik-v14-latin-500italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('./fonts/rubik-v14-latin-500italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 700;
-  src: local(''),
-       url('./fonts/rubik-v14-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('./fonts/rubik-v14-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Rubik';
-  font-style: italic;
-  font-weight: 700;
-  src: local(''),
-       url('./fonts/rubik-v14-latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('./fonts/rubik-v14-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 800;
-  src: local(''),
-       url('./fonts/rubik-v14-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('./fonts/rubik-v14-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Rubik';
-  font-style: italic;
-  font-weight: 800;
-  src: local(''),
-       url('./fonts/rubik-v14-latin-800italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('./fonts/rubik-v14-latin-800italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('./fonts/MarkOT.woff2') format('woff2'); /* Chrome 26+, Opera 23+, Firefox 39+ */
   font-display: swap;
 }
 
 body {
   margin: 0;
-  font-family: Rubik, Arial, sans-serif;
+  font-family: MarkOT, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffffff;
+  background-color: #888888;
+  color: #ebebeb;
 }
 
 code {

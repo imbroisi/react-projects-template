@@ -1,12 +1,5 @@
-import React from 'react';
+import Home from 'pages/Home';
 
-// eslint-disable-next-line arrow-body-style
-const App = () => {
-  return (
-    <div>
-      Hello!
-    </div>
-  );
-};
+const App = Home;
 
 export default App;

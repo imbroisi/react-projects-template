@@ -27,6 +27,7 @@ module.exports = {
     'jest/valid-expect': 'error',
     'import/prefer-default-export': 0,
     'react/function-component-definition': [2, { namedComponents: 'arrow-function' }],
+    'react/react-in-jsx-scope': 'off',
   },
   settings: {
     'import/resolver': {
